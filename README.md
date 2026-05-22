@@ -1,30 +1,22 @@
-# ERP Data Extractor
+ERP Data Extractor
 
-Automated browser-based scraper for ERP systems.
-Captures modal screenshots and extracts phone numbers via OCR.
+Extrator automatizado de dados para sistemas ERP via navegador.
+Captura screenshots de modais e extrai números de telefone usando OCR.
 
-## Scripts
-
-- `src/scraper.mjs` — logs into the ERP, filters records, takes screenshots and saves declaration images
-- `src/extract-phones.cjs` — runs OCR on declaration images, parses phone numbers, POSTs to a webhook
-
-## Requirements
-
-- Node.js >= 18
-- Chromium (installed via Playwright)
-
-## Setup
-
-    npm install
-    npm run install:playwright
-    cp .env.example .env
-
-## Tech stack
-
-- Playwright — browser automation
-- Tesseract.js — OCR
-- node-fetch — HTTP client
-
-## License
+Scripts
+src/scraper.mjs — faz login no ERP, aplica filtros nos registros, captura screenshots e salva imagens das declarações
+src/extract-phones.cjs — executa OCR nas imagens das declarações, identifica números de telefone e envia os dados para um webhook via POST
+Requisitos
+Node.js >= 18
+Chromium (instalado via Playwright)
+Instalação
+npm install
+npm run install:playwright
+cp .env.example .env
+Stack utilizada
+Playwright — automação de navegador
+Tesseract.js — OCR (reconhecimento óptico de caracteres)
+node-fetch — cliente HTTP
+Licença
 
 MIT
